@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class HighLow {
 
     public static void game() {
-        int randomNumber = (int) Math.floor(Math.random() * 10);
+        int randomNumber = (int) Math.floor(Math.random() * 100);
         System.out.println(randomNumber);
         System.out.println();
         Scanner scnr = new Scanner(System.in);
@@ -29,6 +29,12 @@ public class HighLow {
     }
 
     public static void main(String[] args) {
-        game();
+        Scanner scnr = new Scanner(System.in);
+        String userContinue = "yes";
+        do{
+            game();
+            System.out.println("Play again?");
+            userContinue = scnr.next();
+        }while(userContinue.equals("yes"));
     }
 }

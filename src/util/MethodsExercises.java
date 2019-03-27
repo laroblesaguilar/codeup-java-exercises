@@ -1,3 +1,5 @@
+package util;
+
 import java.util.Scanner;
 
 public class MethodsExercises {
@@ -40,6 +42,17 @@ public class MethodsExercises {
         do {
             System.out.format("Enter a number between %d and %d\n", min, max);
             userNum = scnr.nextInt();
+        } while (userNum < min || userNum > max);
+
+        return userNum;
+    }
+
+    public static double getDouble(double min, double max) {
+        Scanner scnr = new Scanner(System.in);
+        double userNum;
+        do {
+            System.out.format("Enter a number between %f and %f\n", min, max);
+            userNum = scnr.nextDouble();
         } while (userNum < min || userNum > max);
 
         return userNum;
