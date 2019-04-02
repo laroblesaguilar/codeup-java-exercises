@@ -18,4 +18,19 @@ public class Dog extends Animal {
     public void growl(){
         System.out.println("Ruff");
     }
+
+    @Override
+    void test() {
+        System.out.println("hello");;
+    }
+
+
+    void test2(){
+        System.out.println("this is a test");
+    }
+
+    public static void main(String[] args) {
+        Animal test = new Dog("Canine",true,"lab");
+        test.test();
+    }
 }

@@ -1,17 +1,17 @@
 package util;
+import java.util.*;
 
 public class InputTest {
     public static void main(String[] args) {
-        Input test = new Input();
 
-//        System.out.println(test.getString());
+        try {
+            System.out.println("Let's see...");
+            int result = 1 / 0;
+            System.out.println("I can divide by zero!");
+        } catch (ArithmeticException e) {
+            System.out.println("Math still works!");
+        }
 
-//        test.getInt(1, 10);
 
-//        System.out.println(test.yesNo());
-
-//        System.out.println(test.getInt());
-
-        System.out.println(test.yesNo());
     }
 }

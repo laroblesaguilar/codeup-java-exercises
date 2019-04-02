@@ -28,4 +28,8 @@ abstract class Animal {
 
     public abstract void growl();
 
+    void test(){
+        System.out.println("Hi");
+    }
+
 }

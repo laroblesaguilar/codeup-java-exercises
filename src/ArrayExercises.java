@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.util.*;
 
 public class ArrayExercises {
 
@@ -63,13 +63,69 @@ public class ArrayExercises {
 
         Person [] arrayOfPerson = {p1, p2, p3};
 
-        for(Person people : arrayOfPerson){
-            System.out.println(people.getName());
-        }
+//        for(Person people : arrayOfPerson){
+//            System.out.println(people.getName());
+//        }
         Person p4 = new Person("Luca");
         Person p5 = new Person("Luna");
 
-        System.out.println(Arrays.toString(Person.addPerson(arrayOfPerson, p5)));
+//        System.out.println(Arrays.toString(Person.addPerson(arrayOfPerson, p5)));
+
+        List<String> roasts = new ArrayList<>();
+        roasts.add("light");
+        roasts.add("medium");
+        roasts.add("medium");
+        roasts.add("dark");
+
+        System.out.println(roasts);
+
+        System.out.println(roasts.get(0));
+        System.out.println(roasts.size());
+        System.out.println(roasts.indexOf("medium"));
+
+        List<Integer> numbers1 = new ArrayList<>();
+
+        numbers1.add(1);
+        numbers1.add(2);
+
+        System.out.println(numbers1);
+
+        numbers1.add(0,0);
+
+        System.out.println(numbers1);
+
+        List<Boolean> booleans = new ArrayList<>();
+
+        booleans.add(true);
+        booleans.add(true);
+        booleans.add(false);
+
+        System.out.println(booleans);
+        booleans.add(0, false);
+        System.out.println(booleans);
+
+        System.out.println(booleans.indexOf(false));
+
+        System.out.println(booleans.get(3));
+
+        System.out.println(roasts);
+
+        roasts.remove(0);
+        System.out.println(roasts);
+
+        for(int i = 0; i < roasts.size(); i++){
+            System.out.println(roasts.get(i));
+        }
+
+        for(String roast : roasts){
+            System.out.println(roast);
+        }
+
+//        Map<String, String> usernames = new HashMap<>();
+
+
+
+
 
 
 

@@ -18,7 +18,8 @@ public class Input {
     }
 
     public boolean yesNo(){
-        String compareTo = scnr.next();
+        String compareTo = scnr.nextLine();
+        while(compareTo.equals("")) compareTo = scnr.nextLine();
         return compareTo.equalsIgnoreCase("y") || compareTo.equalsIgnoreCase("yes");
     }
 
