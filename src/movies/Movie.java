@@ -155,21 +155,40 @@ public class Movie {
     }
 
 
+    static int [] sortIntArray(int [] num){
+        for(int i = 0; i < num.length; i++){
+            int greaterThan = 0;
+            for(int j = 0; j < num.length -1; j++){
+                if (num[j] > num[j +1 ]) {
+                    greaterThan = num[j];
+                    num[j] = num[j+1];
+                    num[j+1] = greaterThan;
+                }
+            }
+        }
+        return num;
+    }
+
+
 
 
     public static void main(String[] args) {
 
         int [] x = {4,5,6,1,8,2,3,7};
 
-        for(int i = 0; i < x.length; i++){
-            int greatestValue = 0;
-            for(int j = 0; j < x.length -1;j++){
-                if(x[j] > x[j+1]){
-                    greatestValue = x[j];
-                    x[j] = x[j+1];
-                    x[j+1] = greatestValue;
-                }
-            }
+//        for(int i = 0; i < x.length; i++){
+//            int greatestValue = 0;
+//            for(int j = 0; j < x.length -1;j++){
+//                if(x[j] > x[j+1]){
+//                    greatestValue = x[j];
+//                    x[j] = x[j+1];
+//                    x[j+1] = greatestValue;
+//                }
+//            }
+//        }
+
+        for(int c : sortIntArray(x)){
+            System.out.println(c);
         }
 
 
